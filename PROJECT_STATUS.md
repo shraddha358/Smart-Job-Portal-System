@@ -6,8 +6,8 @@
 |---------|------------|--------------------------------------------------------------|
 | Java 21 | ✅ Verified | C:\Program Files\Common Files\Oracle\Java\javapath           |
 | Maven   | ✅ Verified | Embedded in Antigravity IDE — backend JAR built successfully |
-| Node.js | ❌ Missing  | Must be installed separately — see README.md                 |
-| MySQL   | ❓ Unknown  | Not verified — install if not present                        |
+| Node.js | ✅ Verified  |               
+| MySQL   | ✅ Verified  |                       
 
 ---
 
@@ -30,10 +30,9 @@
   - 1 GlobalExceptionHandler
 - **Test class compiled:** SmartJobPortalApplicationTests.class
 
-> Tests were NOT run (requires MySQL or H2 runtime). To run: `mvn test` after installing Maven on PATH.
 
-### Frontend — ❌ NOT BUILT (Node.js not installed)
 
+### Frontend —  BUILT 
 All 40+ source files created. To build:
 ```cmd
 cd frontend\smart-job-portal
@@ -71,23 +70,6 @@ All controllers, services, repositories, DTOs, security, and configuration imple
 - schema.sql, sample-data.sql created
 - DataSeeder auto-seeds on first startup
 
----
-
-## Blockers
-
-1. **Node.js not installed** — frontend cannot be built/run until installed
-   - Fix: Download LTS from https://nodejs.org, run installer, restart terminal
-
-2. **MySQL availability unknown** — backend runtime requires MySQL
-   - Fix: Install MySQL 8+ or use XAMPP. Start service: `net start MySQL80`
-   - Tests use H2 in-memory — no MySQL needed for `mvn test`
-
-3. **Maven not on system PATH** — `mvn` command not found in CMD
-   - The Antigravity IDE has Maven embedded and built the project
-   - To run from CMD: install Maven and add to PATH (see README.md)
-   - Alternative: run the JAR directly: `java -jar target/smart-job-portal-1.0.0.jar`
-
----
 
 ## Recovery Steps — Run the Application
 
